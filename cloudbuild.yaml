@@ -31,7 +31,7 @@ steps:
   args:
   - 'apply'
   - '-f'
-  - 'kubernetes.yaml.tpl'
+  - 'kubernetes.yaml'
   env:
   - 'CLOUDSDK_COMPUTE_REGION=us-west1-b'
   - 'CLOUDSDK_CONTAINER_CLUSTER=tf-gke'
