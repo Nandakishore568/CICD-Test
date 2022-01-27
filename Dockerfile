@@ -1,14 +1,8 @@
-# The Dockerfile defines the image's environment
-# Import Python runtime and set up working directory
+# [START dockerfile]
 FROM python:3.7-slim
+RUN pip install flask
 WORKDIR /app
-ADD . /app
-
-# Install any necessary dependencies
-RUN pip install -r requirements.txt
-
-# Open port 80 for serving the webpage
-EXPOSE 80
-
-# Run app.py when the container launches
-CMD ["python", "app.py"]
+COPY app.py /app/app.py
+ENTRYPOINT ["python"]
+CMD ["/app/app.py"]
+# [END dockerfile]
