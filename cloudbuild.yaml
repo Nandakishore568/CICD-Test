@@ -24,3 +24,14 @@ steps:
   - 'push'
   - 'gcr.io/engaged-builder-331710/hello-world'
   
+  # This step deploys the new version of our container image
+# in thetf-gke Kubernetes Engine cluster.
+- name: 'gcr.io/cloud-builders/kubectl'
+  id: Deploy
+  args:
+  - 'apply'
+  - '-f'
+  - 'kubernetes.yaml'
+  env:
+  - 'CLOUDSDK_COMPUTE_REGION=us-central1'
+  - 'CLOUDSDK_CONTAINER_CLUSTER=hello-cloudbuild'
