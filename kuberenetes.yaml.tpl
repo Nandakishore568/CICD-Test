@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-cloudbuild
+  name: tf-gke
   labels:
-    app: hello-cloudbuild
+    app: tf-gke
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: hello-cloudbuild
+      app: tf-gke
   template:
     metadata:
       labels:
         app: hello-cloudbuild
     spec:
       containers:
-      - name: hello-cloudbuild
+      - name: tf-gke
         image: gcr.io/engaged-builder-331710/hello-world
         ports:
         - containerPort: 8080
@@ -23,10 +23,10 @@ spec:
 kind: Service
 apiVersion: v1
 metadata:
-  name: hello-cloudbuild
+  name: tf-gke
 spec:
   selector:
-    app: hello-cloudbuild
+    app: tf-gke
   ports:
   - protocol: TCP
     port: 80
