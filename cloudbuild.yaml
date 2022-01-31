@@ -13,7 +13,7 @@ steps:
   args:
   - 'build'
   - '-t'
-  - 'gcr.io/engaged-builder-331710/hello-world'
+  - 'gcr.io/${PROJECT_ID}/hello-world'
   - '.'
  
 
@@ -22,7 +22,7 @@ steps:
   id: Push
   args:
   - 'push'
-  - 'gcr.io/engaged-builder-331710/hello-world'
+  - 'gcr.io/${PROJECT_ID}/hello-world'
   
   # This step deploys the new version of our container image
 # in thetf-gke Kubernetes Engine cluster.
