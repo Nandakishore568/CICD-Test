@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: hello-cloudbuild
-        image: gcr.io/engaged-builder-331710/hello-world:latest
+        image: gcr.io/${PROJECT_ID}/hello-world:latest
         ports:
         - containerPort: 8080
 ---
