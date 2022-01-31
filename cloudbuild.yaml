@@ -25,7 +25,7 @@ steps:
   - 'gcr.io/${PROJECT_ID}/hello-world'
   
   # This step deploys the new version of our container image
-# in thetf-gke Kubernetes Engine cluster.
+# in Kubernetes Engine cluster.
 - name: 'gcr.io/cloud-builders/kubectl'
   id: Deploy
   args:
