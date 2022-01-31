@@ -33,5 +33,5 @@ steps:
   - '-f'
   - 'kubernetes.yaml'
   env:
-  - 'CLOUDSDK_COMPUTE_REGION=us-west1-b'
-  - 'CLOUDSDK_CONTAINER_CLUSTER=tf-gke'
+  - 'CLOUDSDK_COMPUTE_REGION=${REGION}'
+  - 'CLOUDSDK_CONTAINER_CLUSTER=${CLUSTER}'
